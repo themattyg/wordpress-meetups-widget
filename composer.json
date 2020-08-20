@@ -1,0 +1,55 @@
+{
+    "name": "wordpress-meetups-widget/wordpress-meetups-widget",
+    "description": "An organized, maintainable boilerplate for building widgets using WordPress best practices.",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0-or-later",
+    "homepage": "https://github.com/themattyg/wordpress-meetups-widget",
+    "authors": [
+      {
+        "name": "Matt Graham",
+        "email": "m@mattgraham.ca",
+        "homepage": "https://mattgraham.ca"
+      }
+    ],
+    "support": {
+      "issues": "https://github.com/themattyg/wordpress-meetups-widget/issues"
+    },
+    "config": {
+      "preferred-install": "dist",
+      "platform": {
+          "php": "7.2"
+      }
+    },
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "https://wpackagist.org"
+      }
+    ],
+    "require": {
+      "php": "7.2",
+      "composer/installers": "^1.4"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.13.1",
+        "jakub-onderka/php-parallel-lint": "^1.0.0",
+        "phpmd/phpmd": "^v2.6.0",
+        "nikic/php-parser": "^4.0",
+        "ocramius/proxy-manager": "^2.0.0",
+        "phpro/grumphp": "^0.13.1"
+    },
+    "autoload": {
+        "psr-4": {
+          "WordPressMeetupsWidget\\": "src/",
+          "WordPressMeetupsWidget\\Utilities\\": "src/Utilities/",
+          "WordPressMeetupsWidget\\Subscriber\\": "src/Subscriber/",
+          "WordPressMeetupsWidget\\WordPress\\": "src/WordPress/"
+        }
+      },
+    "scripts": {
+      "test": [
+        "./vendor/bin/grumphp run"
+      ]
+    },
+    "minimum-stability": "stable"
+  }
